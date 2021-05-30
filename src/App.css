@@ -52,6 +52,7 @@ button {
 
 button:hover {
 	background-color: var(--color-secondary);
+	cursor: pointer;
 }
 
 button:disabled {
@@ -62,7 +63,6 @@ button:disabled {
 	flex-direction: column;
 	font-family: var(--font-title);
 	text-transform: capitalize;
-	padding: 0.5rem;
 }
 
 #title > h1 {
@@ -125,14 +125,17 @@ button:disabled {
 }
 
 #author-info {
+	text-decoration: none;
 }
 
 a {
 	color: var(--color-text);
+	text-decoration: none;
 }
 
 a:hover {
 	color: var(--color-text);
+	text-decoration: underline;
 	text-underline-offset: 3px;
 }
 
