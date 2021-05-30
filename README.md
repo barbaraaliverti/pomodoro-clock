@@ -1,72 +1,91 @@
-useful links: https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js
+# Pomodoro Clock
 
-# Getting Started with Create React App
+This is a solution to the [25+5 clock challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-25--5-clock). [FreeCodeCamp](https://www.freecodecamp.org/) is a platform to to help people learn to code for free.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [How to run this project locally](#how-to-run-this-project-locally)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Build a work/break timer based on the [Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique). The user should be able to:
+- Set the work and break session lengths from 1 to 60 minutes
+- Start, pause and reset a session
+- Hear a beep everytime a session ends and the next session starts
+- Identify which session they are currently in 
+
+### Screenshot
+
+preencher depoisss
+
+### Links
+
+prencheer depois
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- A little bit of Bootstrap
+- [React](https://reactjs.org/) - JS library
+
+### How to run this project locally
+
+#### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
+```npm install``` 
 
-### `npm start`
+then
 
-Runs the app in the development mode.\
+```npm start```
+
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+### What I learned
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This was my first project using React hooks instead of classes and I really liked it. This synthax is way easier to work with and to manage states.
 
-### `npm run build`
+The logic behind this project was quite challenging to me, but I ended up learning a lot. For instance, this was the first time I used the ```setInterval()``` method, which is essential to update the countdown clock when the session is running. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To see how you can add code snippets, see below:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Continued development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I loved to worked with React hooks and I want to focus on more projects using these. I also want to improve the componentization of my future projects - as I mentioned before, I started this project on Codepen so I think I could have done a better jobs dividing my application in more components. There are also some features that I want to explore, such as using Font Awesome icons as a package with React.
+For this project in particular, I want to add a session counter to indicate accumulated work time, which would be a nice feature :)
 
-### `npm run eject`
+### Useful resources
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [How to play an audio sound file in ReactJS](https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js) - Initially I started this project on [Codepen](https://codepen.io) and when I exported it to VSCode, there was an error with the alarm beep. This article helped me find another way to play my audio file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Portfolio - [Bárbara Aliverti](https://barbaraaliverti.github.io/)
+- LinkedIn - [@yourusername](https://www.linkedin.com/in/barbaraaliverti)
