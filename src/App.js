@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import AdjustTime from '..src/components/AdjustTime/index.js';
-import Footer from '../src/components/Footer/index.js';
+import AdjustTime from '../src/components/AdjustTime/index';
+import Footer from '../src/components/Footer/index';
 
 function App() {
 	const [sessionLength, setSessionLength] = React.useState(25);
