@@ -48,7 +48,7 @@ function App() {
 			setIsTimerRunning('finished')
 			setIsSession(!isSession);
 		}
-	}, [isSession, timeLeft]);
+	}, [audioBeep, isSession, timeLeft]);
 	
 	//play when session/break is toggled
 	React.useEffect(() => {
