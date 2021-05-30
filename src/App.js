@@ -1,8 +1,7 @@
 import './App.css';
 import React from 'react';
 import AdjustTime from '/home/barbara/projects/pomodoro-clock/src/components/AdjustTime/index.js';
-
-const projectName = 'Pomodoro Clock';
+import Footer from '/home/barbara/projects/pomodoro-clock/src/components/Footer/index.js';
 
 function App() {
 	const [sessionLength, setSessionLength] = React.useState(25);
@@ -12,7 +11,9 @@ function App() {
 	const [isTimerRunning, setIsTimerRunning] = React.useState('stopped'); //'stopped', 'running' or 'paused'
 	const [initialTime, setInitialTime] = React.useState(0);
 
-	//calculates time left
+  const audioBeep = document.getElementById("beep");
+
+	//calculate time left
 	function calculateTimeLeft(futureTime) {
 			const difference = futureTime - +new Date();
 
@@ -30,31 +31,31 @@ function App() {
 	//useEffect will update if timer is running
 	React.useEffect(() => {
 		let intervalId;
-		if(isTimerRunning == 'running') {
+		if(isTimerRunning === 'running') {
 			intervalId = setInterval(() => {
 				setTimeLeft(calculateTimeLeft(initialTime));
 			}, 500);			
 		};
 			
 		return () => clearInterval(intervalId);
-	}, [isTimerRunning]);
+	}, [initialTime, isTimerRunning]);
 	
 	React.useEffect(() => {
-		if(timeLeft['minutes'] == 0 && timeLeft['seconds'] == 0) {
-			this.audioBeep.play();
+		if(timeLeft['minutes'] === 0 && timeLeft['seconds'] === 0) {
+			audioBeep.play();
 		}
-		if(timeLeft['minutes'] == undefined && timeLeft['seconds'] == undefined) {			
+		if(timeLeft['minutes'] === undefined && timeLeft['seconds'] === undefined) {			
 			setIsTimerRunning('finished')
 			setIsSession(!isSession);
 		}
-	}, [timeLeft]);
+	}, [isSession, timeLeft]);
 	
 	//play when session/break is toggled
 	React.useEffect(() => {
-		if (isTimerRunning == 'finished') {
+		if (isTimerRunning === 'finished') {
 			play();
 		}		
-	}, [isSession]);
+	}, [isSession, isTimerRunning, play]);
 	
 	//format time mm:ss
 	const formatTime = (timeLeft) => {
@@ -73,7 +74,6 @@ function App() {
 		return (minutes + ":" + seconds)		
 	};
 		
-	//
 	function checkSession() {
 		if (isSession) {
 			return sessionLength;
@@ -86,8 +86,8 @@ function App() {
 	function reset() {
 		setIsTimerRunning('stopped');
 		//stop audio beep
-		this.audioBeep.pause();
-		this.audioBeep.currentTime = 0;
+		audioBeep.pause();
+		audioBeep.currentTime = 0;
 		//back to initial states
 		setIsSession(true);
 		setSessionLength(25);
@@ -98,6 +98,7 @@ function App() {
 		setIsTimerRunning('paused');
 	};
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	function play() {
 		setIsTimerRunning('running');
 		setInitialTime(+new Date() + (checkSession())*60*1000);
@@ -110,9 +111,9 @@ function App() {
 	};
 	
 	function timerControls() {
-		if (isTimerRunning == 'stopped') {
+		if (isTimerRunning === 'stopped') {
 			return play();
-		} else if (isTimerRunning == 'running') {
+		} else if (isTimerRunning === 'running') {
 			return pause();
 		} else {
 			return resume();
@@ -123,7 +124,7 @@ function App() {
 		
 	function timerDisplay() {
 		console.log(timeLeft);
-		if (isTimerRunning == 'stopped') {
+		if (isTimerRunning === 'stopped') {
 			return(
 				(isSession ? (sessionLength < 10? '0'+ sessionLength : sessionLength) : (breakLength < 10? '0'+ breakLength : breakLength))+':00'			
 			);		
@@ -165,18 +166,11 @@ function App() {
 					</button>
 				</div>
 			</div>			
-			<div id="author-info">
-				<p>
-					<a href="https://barbaraaliverti.github.io/" target="_blank" rel='noreferrer'>by Bárbara Aliverti</a>
-					<a href="https://www.freecodecamp.org/" target="_blank" rel='noreferrer'><i class="fab fa-free-code-camp"></i></a>
-				</p>
-			</div>
+			<Footer />
 		<audio
 			id="beep"
 			preload="auto"
-			// ref={(audio) => {
-			// 	this.audioBeep = audio;
-			// }}
+			type="audio/wav"
 			src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
 		/>
 		</div>
