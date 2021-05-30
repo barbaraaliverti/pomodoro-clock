@@ -28,7 +28,7 @@ Build a work/break timer based on the [Pomodoro technique](https://en.wikipedia.
 
 ### Screenshot
 
-preencher depoisss
+![image](https://user-images.githubusercontent.com/64551613/120117598-514fb280-c164-11eb-9b8d-3db79d008431.png)
 
 ### Links
 
