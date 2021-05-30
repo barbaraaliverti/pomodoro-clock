@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import AdjustTime from '/home/barbara/projects/pomodoro-clock/src/components/AdjustTime/index.js';
-import Footer from '/home/barbara/projects/pomodoro-clock/src/components/Footer/index.js';
+import AdjustTime from '..src/components/AdjustTime/index.js';
+import Footer from '../src/components/Footer/index.js';
 
 function App() {
 	const [sessionLength, setSessionLength] = React.useState(25);
