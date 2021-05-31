@@ -71,8 +71,6 @@ This was my first project using React hooks instead of classes and I really like
 
 The logic behind this project was quite challenging to me, but I ended up learning a lot. For instance, this was the first time I used the ```setInterval()``` method, which is essential to update the countdown clock when the session is running. 
 
-To see how you can add code snippets, see below:
-
 ### Continued development
 
 I loved to worked with React hooks and I want to focus on more projects using these. I also want to improve the componentization of my future projects - as I mentioned before, I started this project on Codepen so I think I could have done a better jobs dividing my application in more components. There are also some features that I want to explore, such as using Font Awesome icons as a package with React.
