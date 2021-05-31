@@ -84,5 +84,5 @@ For this project in particular, I want to add a session counter to indicate accu
 
 ## Author
 
-- Portfolio - [Bárbara Aliverti](https://barbaraaliverti.github.io/)
-- LinkedIn - [@yourusername](https://www.linkedin.com/in/barbaraaliverti)
+- [Portfolio](https://barbaraaliverti.github.io/)
+- [LinkedIn](https://www.linkedin.com/in/barbaraaliverti)
